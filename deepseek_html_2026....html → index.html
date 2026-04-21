@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Luxury Watch Atelier | Rolex Cosmograph Daytona</title>
+    <!-- Google Fonts for Luxury Typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Montserrat:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome 6 (free icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #0a0a0a;
+            font-family: 'Montserrat', sans-serif;
+            color: #e5d9c6;
+            line-height: 1.5;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1a1a1a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #d4af37;
+            border-radius: 10px;
+        }
+
+        /* Luxury Container */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        /* ===== HEADER ===== */
+        .luxury-header {
+            padding: 30px 0 20px;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .logo h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.2rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            background: linear-gradient(135deg, #f5e7d9 0%, #d4af37 80%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .logo p {
+            font-size: 0.7rem;
+            letter-spacing: 3px;
+            color: #b99b4b;
+            text-transform: uppercase;
+        }
+        .nav-links {
+            display: flex;
+            gap: 40px;
+        }
+        .nav-links a {
+            color: #e5d9c6;
+            text-decoration: none;
+            font-size: 0.8rem;
+            font-weight: 400;
+            letter-spacing: 1px;
+            transition: 0.3s;
+            position: relative;
+        }
+        .nav-links a:hover {
+            color: #d4af37;
+        }
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: #d4af37;
+            transition: 0.3s;
+        }
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        .header-icons {
+            display: flex;
+            gap: 20px;
+            font-size: 1.2rem;
+            color: #d4af37;
+        }
+
+        /* ===== HERO SECTION with Diagram Inspired ===== */
+        .hero {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            padding: 60px 0;
+            gap: 40px;
+        }
+        .hero-text {
+            flex: 1;
+            min-width: 280px;
+        }
+        .hero-text .badge {
+            font-size: 0.7rem;
+            letter-spacing: 4px;
+            color: #d4af37;
+            text-transform: uppercase;
+            border-left: 3px solid #d4af37;
+            padding-left: 12px;
+            margin-bottom: 20px;
+        }
+        .hero-text h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3.8rem;
+            font-weight: 500;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+        .hero-text h2 span {
+            color: #d4af37;
+            font-style: italic;
+        }
+        .hero-text .desc {
+            font-size: 0.9rem;
+            color: #bcb09b;
+            margin-bottom: 30px;
+            max-width: 500px;
+        }
+        .btn-gold {
+            background: transparent;
+            border: 1.5px solid #d4af37;
+            color: #d4af37;
+            padding: 12px 32px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            cursor: pointer;
+            transition: 0.4s;
+            text-transform: uppercase;
+            font-family: 'Montserrat', sans-serif;
+        }
+        .btn-gold:hover {
+            background: #d4af37;
+            color: #0a0a0a;
+            box-shadow: 0 8px 20px rgba(212, 175, 55, 0.3);
+        }
+        .hero-diagram {
+            flex: 1;
+            background: rgba(20, 18, 15, 0.7);
+            border-radius: 24px;
+            padding: 20px;
+            backdrop-filter: blur(2px);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            box-shadow: 0 20px 35px rgba(0,0,0,0.5);
+        }
+        .diagram-card {
+            text-align: center;
+        }
+        .diagram-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.4rem;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+            border-bottom: 1px dashed #d4af37;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+        .diagram-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px 30px;
+            text-align: left;
+            margin: 25px 0;
+        }
+        .diagram-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 0.75rem;
+            font-weight: 300;
+            border-bottom: 0.5px dotted rgba(212, 175, 55, 0.3);
+            padding-bottom: 8px;
+        }
+        .diagram-item i {
+            width: 24px;
+            color: #d4af37;
+            font-size: 0.9rem;
+        }
+        .diagram-note {
+            margin-top: 20px;
+            font-size: 0.65rem;
+            color: #aa9f82;
+            text-align: center;
+            letter-spacing: 1px;
+        }
+
+        /* ===== WATCH SHOWCASE - PRODUCT CARDS WITH IMAGES ===== */
+        .watch-showcase {
+            padding: 60px 0;
+        }
+        .section-title {
+            text-align: center;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        .section-sub {
+            text-align: center;
+            font-size: 0.7rem;
+            letter-spacing: 3px;
+            color: #d4af37;
+            margin-bottom: 50px;
+        }
+        .watch-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+        }
+        .watch-card {
+            background: rgba(15, 14, 12, 0.9);
+            border-radius: 28px;
+            overflow: hidden;
+            transition: 0.4s;
+            border: 1px solid rgba(212, 175, 55, 0.25);
+            backdrop-filter: blur(4px);
+            box-shadow: 0 15px 25px rgba(0,0,0,0.3);
+        }
+        .watch-card:hover {
+            transform: translateY(-10px);
+            border-color: #d4af37;
+            box-shadow: 0 25px 35px rgba(212, 175, 55, 0.15);
+        }
+        .watch-img {
+            width: 100%;
+            height: 260px;
+            background: linear-gradient(145deg, #1e1b16, #0f0e0c);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .watch-img img {
+            width: 85%;
+            object-fit: contain;
+            transition: 0.5s;
+            filter: drop-shadow(0 8px 12px rgba(0,0,0,0.5));
+        }
+        .watch-card:hover .watch-img img {
+            transform: scale(1.03);
+        }
+        .watch-info {
+            padding: 24px 22px 28px;
+        }
+        .watch-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+        .watch-ref {
+            font-size: 0.65rem;
+            color: #d4af37;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+            display: inline-block;
+        }
+        .watch-desc {
+            font-size: 0.75rem;
+            color: #bcb09b;
+            line-height: 1.5;
+            margin-bottom: 18px;
+        }
+        .watch-spec {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+            font-size: 0.7rem;
+            color: #aa9f82;
+        }
+        .watch-spec span i {
+            margin-right: 5px;
+            color: #d4af37;
+        }
+        .price {
+            font-weight: 700;
+            color: #f3e3b0;
+            font-size: 1.4rem;
+            letter-spacing: 1px;
+            background: linear-gradient(135deg, #d4af37 0%, #f5e7d9 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            display: inline-block;
+        }
+
+        /* ===== TECHNICAL DIAGRAM FULL WIDTH (inspired by image) ===== */
+        .technical-view {
+            background: #0c0b0a;
+            border-radius: 40px;
+            margin: 40px 0;
+            padding: 40px 20px;
+            border: 1px solid rgba(212, 175, 55, 0.4);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+        }
+        .tech-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .tech-header h3 {
+            font-size: 1.8rem;
+            font-family: 'Cormorant Garamond', serif;
+        }
+        .tech-header p {
+            font-size: 0.7rem;
+            color: #d4af37;
+        }
+        .exploded-view {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px 40px;
+            margin-top: 30px;
+        }
+        .exploded-col {
+            flex: 1;
+            min-width: 200px;
+            background: rgba(0,0,0,0.5);
+            padding: 20px;
+            border-radius: 24px;
+        }
+        .exploded-col h4 {
+            font-size: 0.9rem;
+            border-left: 3px solid #d4af37;
+            padding-left: 12px;
+            margin-bottom: 20px;
+        }
+        .exploded-list {
+            list-style: none;
+        }
+        .exploded-list li {
+            font-size: 0.7rem;
+            padding: 8px 0;
+            border-bottom: 0.5px dotted rgba(212, 175, 55, 0.3);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .exploded-list li i {
+            color: #d4af37;
+            width: 20px;
+            font-size: 0.7rem;
+        }
+
+        /* ===== BRACELET & CASE SECTION ===== */
+        .materials-showcase {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin: 60px 0;
+            background: linear-gradient(145deg, #11100e, #070706);
+            border-radius: 32px;
+            padding: 40px;
+        }
+        .material-text {
+            flex: 1;
+        }
+        .material-text h3 {
+            font-size: 1.8rem;
+            font-family: 'Cormorant Garamond', serif;
+            margin-bottom: 20px;
+        }
+        .gold-badge {
+            display: inline-block;
+            background: #d4af3722;
+            padding: 6px 16px;
+            border-radius: 40px;
+            font-size: 0.7rem;
+            color: #d4af37;
+            margin-bottom: 20px;
+        }
+        .material-text p {
+            font-size: 0.85rem;
+            color: #bcb09b;
+            margin-bottom: 15px;
+        }
+        .material-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .feature {
+            background: rgba(212,175,55,0.1);
+            padding: 8px 16px;
+            border-radius: 40px;
+            font-size: 0.7rem;
+        }
+        .material-img {
+            flex: 0.8;
+            background: #1e1b16;
+            border-radius: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            border: 1px solid #d4af3740;
+        }
+        .bracelet-svg {
+            text-align: center;
+            font-size: 4rem;
+            color: #d4af37;
+        }
+
+        /* ===== NEWSLETTER & FOOTER ===== */
+        .newsletter {
+            text-align: center;
+            padding: 60px 20px;
+            border-top: 1px solid rgba(212, 175, 55, 0.2);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+            margin: 40px 0;
+        }
+        .newsletter h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+        .newsletter input {
+            background: #1f1d1a;
+            border: 1px solid #3a352c;
+            padding: 12px 20px;
+            width: 280px;
+            color: #e5d9c6;
+            font-family: 'Montserrat', sans-serif;
+        }
+        .newsletter button {
+            background: #d4af37;
+            border: none;
+            padding: 12px 28px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s;
+            color: #0a0a0a;
+        }
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
+            padding: 40px 0;
+            font-size: 0.7rem;
+            color: #7a6e55;
+        }
+        .footer-col p {
+            margin-top: 10px;
+        }
+        .social i {
+            font-size: 1.2rem;
+            margin-right: 15px;
+            color: #b99b4b;
+            transition: 0.3s;
+        }
+        .social i:hover {
+            color: #d4af37;
+        }
+
+        /* Responsive */
+        @media (max-width: 800px) {
+            .container { padding: 0 20px; }
+            .hero-text h2 { font-size: 2.4rem; }
+            .nav-links { display: none; }
+            .hero-diagram { margin-top: 20px; }
+            .diagram-grid { grid-template-columns: 1fr; }
+            .watch-grid { gap: 25px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Header -->
+    <div class="luxury-header">
+        <div class="logo">
+            <h1>ROLEX COSMOGRAPH DAYTONA</h1>
+            <p>EXPLODED VIEW • MASTERPIECE ENGINEERING</p>
+        </div>
+        <div class="nav-links">
+            <a href="#">ATELIER</a>
+            <a href="#">MOVEMENT</a>
+            <a href="#">CRAFTSMANSHIP</a>
+            <a href="#">COLLECTION</a>
+        </div>
+        <div class="header-icons">
+            <i class="fas fa-search"></i>
+            <i class="far fa-heart"></i>
+            <i class="far fa-user"></i>
+        </div>
+    </div>
+
+    <!-- Hero Section with Diagram Card (Inspired by Image) -->
+    <div class="hero">
+        <div class="hero-text">
+            <div class="badge">TIMELESS PRECISION</div>
+            <h2>The Architecture of <span>Time</span></h2>
+            <p class="desc">Every component, from the 18k gold bezel to the intricate wheel train, reflects uncompromising luxury. The Cosmograph Daytona — a symphony of horological excellence.</p>
+            <button class="btn-gold" id="exploreBtn2D">✦ EXPLORE THE MOVEMENT ✦</button>
+        </div>
+        <div class="hero-diagram">
+            <div class="diagram-card">
+                <div class="diagram-title">⚙️ EXPLODED VIEW | TECHNICAL DIAGRAM</div>
+                <div class="diagram-grid">
+                    <div class="diagram-item"><i class="fas fa-gem"></i> 18k Gold Bezel Ring</div>
+                    <div class="diagram-item"><i class="fas fa-cube"></i> Sapphire Crystal</div>
+                    <div class="diagram-item"><i class="fas fa-sun"></i> Green 'Sunburst' Dial</div>
+                    <div class="diagram-item"><i class="fas fa-clock"></i> Chronograph Hands</div>
+                    <div class="diagram-item"><i class="fas fa-cogs"></i> Hour / Minute Wheel</div>
+                    <div class="diagram-item"><i class="fas fa-microchip"></i> Movement Main Plate</div>
+                    <div class="diagram-item"><i class="fas fa-bolt"></i> Wheel Train & Gears</div>
+                    <div class="diagram-item"><i class="fas fa-tachometer-alt"></i> Pushograph Pusher</div>
+                    <div class="diagram-item"><i class="fas fa-link"></i> 18k Oyster Bracelets</div>
+                    <div class="diagram-item"><i class="fas fa-hand-peace"></i> Easylink Extensions</div>
+                    <div class="diagram-item"><i class="fas fa-shield-alt"></i> New Clean Gasket</div>
+                    <div class="diagram-item"><i class="fas fa-draw-polygon"></i> Case Body & End Links</div>
+                </div>
+                <div class="diagram-note">* Inspired by original technical schematics | Every detail authentic</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- WATCH COLLECTION - IMAGES + SIMPLE DETAILS (Only 3 Watches, Price $499) -->
+    <div class="watch-showcase">
+        <div class="section-title">The Daytona Collection</div>
+        <div class="section-sub">ICONIC MODELS • EXQUISITE FINISHES</div>
+        <div class="watch-grid">
+            
+            <!-- Watch Card 1 - Panda Dial -->
+            <div class="watch-card">
+                <div class="watch-img">
+                    <img src="https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?w=500&auto=format" alt="Rolex Daytona Panda" onerror="this.src='https://placehold.co/400x300/1a1815/d4af37?text=Daytona+Panda'">
+                </div>
+                <div class="watch-info">
+                    <div class="watch-title">Cosmograph Daytona "Panda"</div>
+                    <div class="watch-ref">Ref. 116500LN</div>
+                    <div class="watch-desc">Iconic white dial with black contrasting sub-dials, ceramic black bezel, and Oyster bracelet. The ultimate racing chronograph.</div>
+                    <div class="watch-spec">
+                        <span><i class="fas fa-ruler-combined"></i> 40mm</span>
+                        <span><i class="fas fa-water"></i> 100m</span>
+                        <span><i class="fas fa-gem"></i> Cerachrom Bezel</span>
+                    </div>
+                    <div class="price">$499</div>
+                </div>
+            </div>
+            
+            <!-- Watch Card 2 - Green Dial / Gold -->
+            <div class="watch-card">
+                <div class="watch-img">
+                    <img src="https://images.unsplash.com/photo-1533139502658-0198f920d8e8?w=500&auto=format" alt="Rolex Daytona Everose Gold" onerror="this.src='https://placehold.co/400x300/1a1815/d4af37?text=Everrose+Gold'">
+                </div>
+                <div class="watch-info">
+                    <div class="watch-title">Daytona Everose Gold</div>
+                    <div class="watch-ref">Ref. 126505</div>
+                    <div class="watch-desc">18k Everose gold case & bracelet, green sunburst dial, contrasting chronograph counters. Exceptional brilliance.</div>
+                    <div class="watch-spec">
+                        <span><i class="fas fa-ruler-combined"></i> 40mm</span>
+                        <span><i class="fas fa-gold"></i> 18k Rose Gold</span>
+                        <span><i class="fas fa-sun"></i> Sunburst Dial</span>
+                    </div>
+                    <div class="price">$499</div>
+                </div>
+            </div>
+            
+            <!-- Watch Card 3 - Platinum with Ice Blue Dial -->
+            <div class="watch-card">
+                <div class="watch-img">
+                    <img src="https://images.unsplash.com/photo-1587836374828-4dbafa94cf0e?w=500&auto=format" alt="Rolex Daytona Platinum" onerror="this.src='https://placehold.co/400x300/1a1815/d4af37?text=Platinum+Daytona'">
+                </div>
+                <div class="watch-info">
+                    <div class="watch-title">Daytona Platinum</div>
+                    <div class="watch-ref">Ref. 126506</div>
+                    <div class="watch-desc">Ice blue dial, chestnut brown sub-dials, platinum case with diamond markers. The pinnacle of prestige.</div>
+                    <div class="watch-spec">
+                        <span><i class="fas fa-ruler-combined"></i> 40mm</span>
+                        <span><i class="fas fa-gem"></i> Platinum</span>
+                        <span><i class="fas fa-clock"></i> COSC Certified</span>
+                    </div>
+                    <div class="price">$499</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Full Technical Exploded View (2D layout from diagram) -->
+    <div class="technical-view">
+        <div class="tech-header">
+            <h3>✦ EXPLODED SCHEMATIC ✦</h3>
+            <p>Every component meticulously engineered — inspired by original workshop diagrams</p>
+        </div>
+        <div class="exploded-view">
+            <div class="exploded-col">
+                <h4><i class="fas fa-crown"></i> CASE & CRYSTAL</h4>
+                <ul class="exploded-list">
+                    <li><i class="fas fa-circle"></i> 18k Gold Bezel Ring</li>
+                    <li><i class="fas fa-gem"></i> Sapphire Crystal (Dome)</li>
+                    <li><i class="fas fa-shield-alt"></i> New Clean Gasket</li>
+                    <li><i class="fas fa-draw-polygon"></i> Case Body - Oystersteel</li>
+                </ul>
+            </div>
+            <div class="exploded-col">
+                <h4><i class="fas fa-tachometer-alt"></i> DIAL & COMPLICATIONS</h4>
+                <ul class="exploded-list">
+                    <li><i class="fas fa-sun"></i> Green 'Sunburst' Dial</li>
+                    <li><i class="fas fa-hourglass-half"></i> Chronograph Hands</li>
+                    <li><i class="fas fa-chart-simple"></i> Hour / Minute Wheels</li>
+                    <li><i class="fas fa-clock"></i> Sub-dial counters</li>
+                </ul>
+            </div>
+            <div class="exploded-col">
+                <h4><i class="fas fa-microchip"></i> MOVEMENT & GEARS</h4>
+                <ul class="exploded-list">
+                    <li><i class="fas fa-cogs"></i> Wheel Train Assembly</li>
+                    <li><i class="fas fa-gear"></i> Movement Main Plate</li>
+                    <li><i class="fas fa-bolt"></i> Rol Plate / Bridges</li>
+                    <li><i class="fas fa-hand-back-fist"></i> Pushograph Pusher</li>
+                </ul>
+            </div>
+            <div class="exploded-col">
+                <h4><i class="fas fa-link"></i> BRACELET & CLASP</h4>
+                <ul class="exploded-list">
+                    <li><i class="fas fa-link"></i> 18k Oyster Bracelets</li>
+                    <li><i class="fas fa-hand-peace"></i> Easylink Comfort Extension</li>
+                    <li><i class="fas fa-lock"></i> Oysterclasp Components</li>
+                    <li><i class="fas fa-grip-lines"></i> End Links</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bracelet & Materials Showcase -->
+    <div class="materials-showcase">
+        <div class="material-text">
+            <span class="gold-badge"><i class="fas fa-crown"></i> 18K GOLD & OYSTERSTEEL</span>
+            <h3>The Bracelet Architecture</h3>
+            <p>Engineered for both comfort and endurance, the Oyster bracelet features solid links, an elegant Oysterclasp, and the ingenious Easylink comfort extension allowing up to 5mm of additional length.</p>
+            <div class="material-features">
+                <span class="feature">✦ Solid End Links</span>
+                <span class="feature">✦ Easylink System</span>
+                <span class="feature">✦ Polished Center Links</span>
+                <span class="feature">✦ Ceramic Inserts</span>
+            </div>
+        </div>
+        <div class="material-img">
+            <div class="bracelet-svg">
+                <i class="fas fa-link fa-3x"></i> <i class="fas fa-link fa-2x"></i> <i class="fas fa-link fa-3x"></i>
+                <div style="font-size: 0.7rem; margin-top: 15px;">18k Oyster Bracelet • Easylink Comfort</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Additional: Case Back & Gasket Detail -->
+    <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: space-between; margin: 20px 0 50px;">
+        <div style="background: #131110; padding: 20px; border-radius: 24px; flex:1; text-align: center;">
+            <i class="fas fa-dharmachakra" style="font-size: 2rem; color:#d4af37;"></i>
+            <h4 style="margin: 12px 0;">18k Case Back</h4>
+            <p style="font-size:0.7rem;">Screw-down case back with fine fluting, ensuring 100m water resistance.</p>
+        </div>
+        <div style="background: #131110; padding: 20px; border-radius: 24px; flex:1; text-align: center;">
+            <i class="fas fa-water" style="font-size: 2rem; color:#d4af37;"></i>
+            <h4 style="margin: 12px 0;">New Clean Gasket</h4>
+            <p style="font-size:0.7rem;">High-performance gasket guarantees optimal sealing and longevity.</p>
+        </div>
+        <div style="background: #131110; padding: 20px; border-radius: 24px; flex:1; text-align: center;">
+            <i class="fas fa-crown" style="font-size: 2rem; color:#d4af37;"></i>
+            <h4 style="margin: 12px 0;">Crown Stem / Triplock</h4>
+            <p style="font-size:0.7rem;">Triple waterproofness system, screw-down crown.</p>
+        </div>
+    </div>
+
+    <!-- Newsletter & Footer -->
+    <div class="newsletter">
+        <h3>THE ATELIER NEWSLETTER</h3>
+        <p style="margin-bottom: 20px;">Subscribe to receive exclusive insights and craftsmanship stories.</p>
+        <input type="email" placeholder="Your email address">
+        <button>SUBSCRIBE</button>
+    </div>
+
+    <div class="footer">
+        <div class="footer-col">
+            <h4 style="color:#d4af37;">ROLEX COSMOGRAPH DAYTONA</h4>
+            <p>Exploded diagram & specifications inspired by original blueprints. A tribute to mechanical artistry.</p>
+        </div>
+        <div class="footer-col">
+            <p>MOVEMENT<br>CHRONOGRAPH<br>BRACELET<br>SERVICE</p>
+        </div>
+        <div class="footer-col social">
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-youtube"></i>
+            <p>© 2025 Luxury Atelier | Precision in Every Detail</p>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Interactive alert for explore movement button
+    const exploreBtn = document.getElementById('exploreBtn2D');
+    if(exploreBtn) {
+        exploreBtn.addEventListener('click', () => {
+            alert("✦ EXPLODED VIEW ACTIVATED ✦\nDiscover the intricate wheel train, gold bezel, and sapphire crystal architecture.\nInspired by the original Cosmograph diagram.");
+        });
+    }
+
+    // Hover effect on diagram items
+    const items = document.querySelectorAll('.diagram-item');
+    items.forEach(item => {
+        item.addEventListener('mouseenter', () => {
+            item.style.transform = 'translateX(5px)';
+            item.style.transition = '0.2s';
+        });
+        item.addEventListener('mouseleave', () => {
+            item.style.transform = 'translateX(0)';
+        });
+    });
+</script>
+</body>
+</html>
